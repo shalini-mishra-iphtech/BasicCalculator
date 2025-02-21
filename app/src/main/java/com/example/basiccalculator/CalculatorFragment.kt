@@ -16,7 +16,9 @@ class CalculatorFragment : Fragment() {
 
     private lateinit var editText1: EditText
     private lateinit var editText2: EditText
+    private lateinit var editText3: EditText
     private lateinit var textView1: TextView
+    private lateinit var Result: TextView
     private lateinit var addBtn: Button
     private lateinit var subBtn: Button
     private lateinit var mulBtn: Button
@@ -32,30 +34,34 @@ class CalculatorFragment : Fragment() {
 //        editText2=view.findViewById(R.id.valueET2)
 //        textView1=view.findViewById(R.id.result)
 
-        editText1=view.findViewById(R.id.valueET1)
+       // editText1=view.findViewById(R.id.valueET1)
+        editText1 = view.findViewById(R.id.valueET1)
         editText2 = view.findViewById(R.id.valueET2)
-        textView1 = view.findViewById(R.id.result)
+        editText3 = view.findViewById(R.id.valueET3)
+        //textView1 = view.findViewById(R.id.result)
         addBtn= view.findViewById(R.id.add)
         subBtn = view.findViewById(R.id.sub)
         mulBtn= view.findViewById(R.id.mul)
         divBtn = view.findViewById(R.id.div)
 
         fun addNumbers() {
+
             val value1 = editText1.text.toString().toIntOrNull() ?: 0
-            val value2 = editText2.text.toString().toIntOrNull() ?: 0
+            val value2 = editText3.text.toString().toIntOrNull() ?: 0
             val result = value1 + value2
-            textView1.text = result.toString()
+            Result.text = result.toString()
         }
 
         // Set click listener inside the function
         addBtn.setOnClickListener {
+            editText2.setText(addBtn.text.toString())
             addNumbers()
         }
         fun subNumbers() {
             val value1 = editText1.text.toString().toIntOrNull() ?: 0
             val value2 = editText2.text.toString().toIntOrNull() ?: 0
             val result = value1 - value2
-            textView1.text = result.toString()
+            Result.text = result.toString()
         }
 
         // Set click listener inside the function
@@ -67,7 +73,7 @@ class CalculatorFragment : Fragment() {
             val value1 = editText1.text.toString().toIntOrNull() ?: 0
             val value2 = editText2.text.toString().toIntOrNull() ?: 0
             val result = value1 * value2
-            textView1.text = result.toString()
+            Result.text = result.toString()
         }
 
         // Set click listener inside the function
@@ -81,12 +87,12 @@ class CalculatorFragment : Fragment() {
 
             if(value2==0){
                 val result="infinite"
-                textView1.text=result
+                Result.text=result
 
             }
             else {
                 val result = value1 / value2
-                textView1.text = result.toString()
+                Result.text = result.toString()
             }
         }
 
