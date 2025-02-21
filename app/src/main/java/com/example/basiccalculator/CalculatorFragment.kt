@@ -51,7 +51,6 @@ class CalculatorFragment : Fragment() {
         addBtn.setOnClickListener {
             addNumbers()
         }
-
         fun subNumbers() {
             val value1 = editText1.text.toString().toIntOrNull() ?: 0
             val value2 = editText2.text.toString().toIntOrNull() ?: 0
