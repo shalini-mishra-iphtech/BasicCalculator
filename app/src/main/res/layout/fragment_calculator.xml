@@ -58,26 +58,25 @@
         android:gravity="center"
         android:textSize="24sp" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint="Sign"
+        android:textSize="24sp"
+        tools:ignore="InefficientWeight" />
+
     <EditText
         android:id="@+id/valueET2"
         android:layout_width="120dp"
         android:layout_height="60dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:hint="Sign"
-        android:textSize="24sp" />
-
-    <EditText
-        android:id="@+id/valueET3"
-        android:layout_width="120dp"
-        android:layout_height="60dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:inputType="number"
         android:hint="2nd"
+        android:gravity="center"
+        android:inputType="number"
         android:textSize="24sp" />
 </LinearLayout>
 
